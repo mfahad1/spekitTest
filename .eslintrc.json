@@ -1,0 +1,90 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "plugins": [
+    "react",
+    "@typescript-eslint",
+    "import"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended"
+  ],
+  "env": {
+    "browser": true,
+    "jasmine": true,
+    "jest": true,
+    "es6": true
+  },
+  "rules": {
+    "@typescript-eslint/no-unused-vars": "warn",
+    "import/order": ["warn", {
+      "newlines-between": "always",
+      "alphabetize": {
+        "order": "asc",
+        "caseInsensitive": true
+      }
+    }],
+    "import/newline-after-import": ["warn", { "count": 1 }],
+    "no-console": 1,
+    "padded-blocks": ["warn", "never"],
+    "no-multi-spaces": 1,
+    "keyword-spacing": 1,
+    "space-in-parens": 1,
+    "comma-spacing": 1,
+    "array-bracket-spacing": 1,
+    "max-len": 0,
+    "indent": ["warn", 2],
+    "eol-last": ["warn", "always"],
+    "comma-dangle": ["warn", "always-multiline"],
+    "no-trailing-spaces": 1,
+    "no-multiple-empty-lines": ["warn", {
+      "max": 1,
+      "maxBOF": 0,
+      "maxEOF": 0
+    }],
+    "semi": 1,
+    "padding-line-between-statements": ["warn",
+      { "blankLine": "always", "prev": "*", "next": "return" },
+      { "blankLine": "always", "prev": ["const", "let", "var"], "next": "*"},
+      { "blankLine": "any", "prev": ["const", "let", "var"], "next": ["const", "let", "var"]},
+      { "blankLine": "any", "prev": ["const", "let", "var"], "next": ["if", "for"]}
+    ],
+    "quotes": ["warn", "single"],
+    "linebreak-style": ["warn", "unix"],
+    "space-infix-ops": 1,
+
+    // React/JSX specific
+    "react-hooks/rules-of-hooks": "warn",
+    "react/jsx-indent": ["warn", 2, {
+      "checkAttributes": true,
+      "indentLogicalExpressions": true
+    }],
+    "react/jsx-indent-props": ["warn", 2],
+    "react/jsx-curly-spacing": "warn",
+    "react/jsx-curly-brace-presence": ["warn", {
+      "props": "never",
+      "children": "never"
+    }],
+    "react/jsx-wrap-multilines": ["warn", {
+      "declaration": "parens-new-line",
+      "assignment": "parens-new-line",
+      "return": "parens-new-line",
+      "arrow": "parens-new-line",
+      "condition": "ignore",
+      "logical": "ignore",
+      "prop": "ignore"
+    }],
+    "react/jsx-closing-bracket-location": "warn",
+    "react/self-closing-comp": "warn"
+  },
+  "settings": {
+    "react": {
+      "pragma": "React",
+      "version": "detect"
+    }
+  }
+}

@@ -1,0 +1,15 @@
+.album-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.search-input-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 0 0 0;
+
+  .search-input {
+    margin: 0 20vw 0 25vw;
+  }
+}
